@@ -1,0 +1,24 @@
+{
+  "name": "rca-bad-pr-causation",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Test data for BrowserStack Test Observability 'Bad PR Causation' RCA. Provides a minimal app + WDIO/Mocha spec, plus regression branches that introduce a faulty Dev PR or a faulty Automation PR.",
+  "scripts": {
+    "test": "wdio run ./wdio.conf.js",
+    "test:prod": "PROFILE=prod wdio run ./wdio.conf.js",
+    "test:preprod": "PROFILE=preprod wdio run ./wdio.conf.js",
+    "test:regression": "PROFILE=regression wdio run ./wdio.conf.js"
+  },
+  "dependencies": {
+    "chai": "^4.3.10"
+  },
+  "devDependencies": {
+    "@wdio/browserstack-service": "^8.46.0",
+    "@wdio/cli": "^8.0.0",
+    "@wdio/local-runner": "^8.0.0",
+    "@wdio/mocha-framework": "^8.0.0",
+    "@wdio/spec-reporter": "^8.0.0",
+    "mocha": "^11.7.2",
+    "webdriverio": "^8.0.0"
+  }
+}
