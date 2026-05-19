@@ -1,7 +1,10 @@
 const { expect } = require('chai');
 
+// On the bad-automation-pr branch the live app is the *clean* HTML
+// (deployed from main). The failures here come from the spec diff:
+// broken selectors / wrong expected strings. This URL is the clean site.
 const APP_URL = process.env.RCA_APP_URL
-    || 'https://tranquil-custard-21c4b2.netlify.app/';
+    || 'https://celadon-duckanoo-625c0b.netlify.app/';
 
 describe('Bad PR Causation - RCA training signal', () => {
     beforeEach(async () => {
