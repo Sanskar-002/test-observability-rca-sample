@@ -1,0 +1,5 @@
+testOrchestrationOptions:
+  runSmartSelection:
+    enabled: true
+    mode: relevantFirst
+    source: ./selection_config.json
