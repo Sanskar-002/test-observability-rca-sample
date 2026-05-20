@@ -4,8 +4,6 @@
   "private": true,
   "description": "Test data for BrowserStack Test Observability 'Bad PR Causation' RCA. Provides a minimal app + WDIO/Mocha spec, plus regression branches that introduce a faulty Dev PR or a faulty Automation PR.",
   "scripts": {
-    "patch-bsstag": "node scripts/patch-bsstag.js",
-    "pretest": "npm run patch-bsstag --silent",
     "test": "browserstack-node-sdk wdio run ./wdio.conf.js",
     "test:prod": "PROFILE=prod browserstack-node-sdk wdio run ./wdio.conf.js",
     "test:preprod": "PROFILE=preprod browserstack-node-sdk wdio run ./wdio.conf.js",
