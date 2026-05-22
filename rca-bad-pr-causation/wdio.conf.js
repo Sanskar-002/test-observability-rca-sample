@@ -10,6 +10,7 @@
 //   regression:  BROWSERSTACK_REGRESSION_USERNAME   / BROWSERSTACK_REGRESSION_ACCESS_KEY
 
 const PROFILE = (process.env.PROFILE || 'prod').toLowerCase();
+const PROJECT_NAME = process.env.PROJECT_NAME || 'Test Observability Samples';
 
 const PROFILES = {
     prod: {
@@ -55,7 +56,7 @@ exports.config = {
         'bstack:options': {
             os: 'Windows',
             osVersion: '10',
-            projectName: 'Test Observability Samples',
+            projectName: PROJECT_NAME,
             buildName: process.env.BUILD_NAME
                 || `bad-pr-causation-${PROFILE}-${new Date().toISOString().split('T')[0]}`,
             buildTag: PROFILE,
@@ -71,7 +72,7 @@ exports.config = {
         ['browserstack', {
             testObservability: true,
             testObservabilityOptions: {
-                projectName: 'Test Observability Samples',
+                projectName: PROJECT_NAME,
                 buildName: process.env.BUILD_NAME
                     || `bad-pr-causation-${PROFILE}-${new Date().toISOString().split('T')[0]}`,
                 buildTag: PROFILE
