@@ -1,6 +1,6 @@
 {
   "RCA_SAMPLE": {
     "url": "https://github.com/Sanskar-002/test-observability-rca-sample",
-    "baseBranch": "main"
+    "baseBranch": "regression-automation"
   }
 }
