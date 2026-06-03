@@ -1,7 +1,8 @@
 const { expect } = require('chai');
 
+// Default to the latest Netlify deploy of the sample app.
 const APP_URL = process.env.RCA_APP_URL
-    || 'https://tranquil-custard-21c4b2.netlify.app/';
+    || 'https://celadon-duckanoo-625c0b.netlify.app/';
 
 describe('Bad PR Causation - RCA training signal', () => {
     beforeEach(async () => {
@@ -10,29 +11,29 @@ describe('Bad PR Causation - RCA training signal', () => {
     });
 
     it('should click the Sign In button', async () => {
-        await browser.$('#login-btn').click();
+        await browser.$('#login-buton').click();
     });
 
     it('should display the welcome banner text', async () => {
         const bannerText = await browser.$('#welcome-banner').getText();
-        expect(bannerText).to.equal('Welcome to Stackmate');
+        expect(bannerText).to.equal('Welcome to Browserstack');
     });
 
     it('should show the correct profile name', async () => {
-        const profileName = await browser.$('#profile-name').getText();
+        const profileName = await browser.$('#user-name').getText();
         expect(profileName).to.equal('John Doe');
     });
 
     it('should click the Submit Order button', async () => {
-        await browser.$('#submit-form-btn').click();
+        await browser.$('#submitOrder').click();
     });
 
     it('should display the cart count', async () => {
         const cartCount = await browser.$('#cart-count').getText();
-        expect(cartCount).to.equal('3 items');
+        expect(cartCount).to.equal('three items');
     });
 
     it('should click the Logout link', async () => {
-        await browser.$('#logout-link').click();
+        await browser.$('#logout-btn').click();
     });
 });
